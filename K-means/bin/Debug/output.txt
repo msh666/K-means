@@ -1,0 +1,8 @@
+1 element contains in 2 cluster.
+2 element contains in 2 cluster.
+3 element contains in 0 cluster.
+4 element contains in 0 cluster.
+5 element contains in 0 cluster.
+6 element contains in 0 cluster.
+7 element contains in 1 cluster.
+8 element contains in 1 cluster.

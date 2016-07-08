@@ -1,0 +1,15 @@
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\K-means\K-means\bin\Debug\K-means.exe.config
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\K-means\K-means\bin\Debug\Accord.dll.config
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\K-means\K-means\bin\Debug\K-means.exe
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\K-means\K-means\bin\Debug\K-means.pdb
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\K-means\K-means\bin\Debug\Accord.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\K-means\K-means\bin\Debug\Accord.MachineLearning.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\K-means\K-means\bin\Debug\Accord.Math.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\K-means\K-means\bin\Debug\Accord.Statistics.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\K-means\K-means\bin\Debug\Accord.xml
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\K-means\K-means\bin\Debug\Accord.MachineLearning.xml
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\K-means\K-means\bin\Debug\Accord.Math.xml
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\K-means\K-means\bin\Debug\Accord.Statistics.xml
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\K-means\K-means\obj\Debug\K-means.csprojResolveAssemblyReference.cache
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\K-means\K-means\obj\Debug\K-means.exe
+C:\Users\Дмитрий\Documents\Visual Studio 2015\Projects\K-means\K-means\obj\Debug\K-means.pdb
