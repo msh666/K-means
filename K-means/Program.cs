@@ -14,10 +14,11 @@ namespace K_means
         {
             Program pr = new Program();
             // Declare some observations
-            double[][] observations = pr.ReadFromFile("input.txt");
+            int clusterNum;
+            double[][] observations = pr.ReadFromFile("input.txt", out clusterNum);
 
             // Create a new K-Means algorithm with 3 clusters 
-            KMeans kmeans = new KMeans(3);
+            KMeans kmeans = new KMeans(clusterNum);
 
             // Compute the algorithm, retrieving an integer array
             //  containing the labels for each of the observations
@@ -25,7 +26,7 @@ namespace K_means
             pr.Write(labels);
         }
 
-        public double[][] ReadFromFile(string FileName)
+        public double[][] ReadFromFile(string FileName, out int clusterNum)
         {
             int rows = 0;
             string tmp;
@@ -39,7 +40,7 @@ namespace K_means
             }
             double[][] array = new double[rows - 1][];
             fs.Seek(0, SeekOrigin.Begin);
-            sr.ReadLine();
+            clusterNum = int.Parse(sr.ReadLine());
             int i = 0;
             while (!sr.EndOfStream)
             {
@@ -58,7 +59,7 @@ namespace K_means
             using (System.IO.StreamWriter file = new System.IO.StreamWriter("output.txt", false))
             {
                 int i = 1;
-                while (i != lables.Length)
+                while (i != lables.Length + 1)
                 {
                     file.WriteLine(i + " element contains in " + lables[i - 1] + " cluster.");
                     i++;
