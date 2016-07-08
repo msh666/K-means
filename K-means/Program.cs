@@ -12,59 +12,14 @@ namespace K_means
     {
         static void Main(string[] args)
         {
-            Program pr = new Program();
-            // Declare some observations
+            Calculation calc = new Calculation();
+            FileProcessing fp = new FileProcessing();
+            fp.InputName = "input.txt";
+            fp.OutputName = "output.txt";
             int clusterNum;
-            double[][] observations = pr.ReadFromFile("input.txt", out clusterNum);
-
-            // Create a new K-Means algorithm with 3 clusters 
-            KMeans kmeans = new KMeans(clusterNum);
-
-            // Compute the algorithm, retrieving an integer array
-            //  containing the labels for each of the observations
-            int[] labels = kmeans.Compute(observations);
-            pr.Write(labels);
-        }
-
-        public double[][] ReadFromFile(string FileName, out int clusterNum)
-        {
-            int rows = 0;
-            string tmp;
-            char[] sep = { ' ' };
-            FileStream fs = new FileStream(FileName, FileMode.Open, FileAccess.Read);
-            StreamReader sr = new StreamReader(fs);
-            while (!sr.EndOfStream)
-            {
-                sr.ReadLine();
-                rows++;
-            }
-            double[][] array = new double[rows - 1][];
-            fs.Seek(0, SeekOrigin.Begin);
-            clusterNum = int.Parse(sr.ReadLine());
-            int i = 0;
-            while (!sr.EndOfStream)
-            {
-                tmp = sr.ReadLine();
-                string[] s = tmp.Split(sep, StringSplitOptions.RemoveEmptyEntries);
-                array[i] = new double[] { double.Parse(s[0]), double.Parse(s[1]), double.Parse(s[2]) };
-                i++;
-            }
-            sr.Close();
-            fs.Close();
-            return array;
-        }
-
-        public void Write(int [] lables)
-        {
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter("output.txt", false))
-            {
-                int i = 1;
-                while (i != lables.Length + 1)
-                {
-                    file.WriteLine(i + " element contains in " + lables[i - 1] + " cluster.");
-                    i++;
-                }
-            }
-        }
+            double[][] observations = fp.ReadFromFile(out clusterNum);
+            int[] labels = calc.CalculateKMeans(clusterNum, observations);
+            fp.Write(labels);      
+        }       
     }
 }
